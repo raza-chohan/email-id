@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <label for="username">
+          name <input type="text" id="username">
+     </label>
+        <br>
+     <label for="loginemail">
+          email<input type="text" id="loginemail">
+     </label>
+        <br>
+     <label for="loginpassword">
+          password <input type="text" id="loginpassword">
+     </label>
+   <br>
+    <button onclick="signUp()">sign up</button>
+    <br>
+    <a href="login.html">Click Here To Login Page</a>
+
+    <script>
+      function login(){
+          let username =document.getElementById("username").value;
+          let useremail = document.getElementById("useremail").value;
+          let userpassword = document.getElementById("userpassword").value;
+
+          localStorage.setItem("username", username);
+          localStorage.setItem("email", useremail);
+          localStorage.setItem("password", userpassword);
+        alert("Sign Up Successfully Goto Login Page")
+      }
+    </script>
+</body>
+</html>
